@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #e8f0fe;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    #task-form {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    #task-form input {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #task-form button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #task-list {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .task {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .task.completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .task-actions button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+
+    #details {
+      max-width: 600px;
+      margin: 30px auto 0;
+      padding: 15px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue sur le Dashboard 🎉</h1>
+
+  <div id="task-form">
+    <input type="text" id="task-input" placeholder="Nouvelle tâche...">
+    <button onclick="addTask()">Ajouter</button>
+  </div>
+
+  <div id="task-list"></div>
+
+  <div id="details"></div>
+
+
+  <script src="dashboard.js"></script>
+
+</body>
+</html>
